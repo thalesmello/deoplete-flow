@@ -41,5 +41,6 @@ class Source(Base):
         return [{
             'word': x['name'],
             'kind': x['type'],
-            'info': '{} {}'.format(x['name'], x['type'])
+            'info': '{} {}'.format(x['name'], x['type']),
+            'dup': 1
         } for x in results['result']]
