@@ -15,7 +15,7 @@ class Source(Base):
         self.rank = 600
         self.name = 'flow'
         self.mark = '[FL]'
-        self.min_pattern_length = 0
+        self.input_pattern = '\.'
         self.filetypes = ['javascript']
 
     def get_complete_position(self, context):
