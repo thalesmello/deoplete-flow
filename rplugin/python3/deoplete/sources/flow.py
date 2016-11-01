@@ -38,4 +38,8 @@ class Source(Base):
 
         results = json.loads(command_results.decode('utf-8'))
 
-        return [{'word': x['name'], 'kind': x['type']} for x in results['result']] 
+        return [{
+            'word': x['name'],
+            'kind': x['type'],
+            'info': '{} {}'.format(x['name'], x['type'])
+        } for x in results['result']]
